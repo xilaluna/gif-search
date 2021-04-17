@@ -1,5 +1,12 @@
 // Require Libraries
+const { response } = require("express")
 const express = require("express")
+
+const Tenor = require("tenorjs").client({
+  Key: "JEGTEZF54LUT",
+  Filter: "high",
+  Locale: "en_US",
+})
 
 // App Setup
 const app = express()
@@ -13,8 +20,16 @@ app.set("view engine", "handlebars")
 // Routes
 
 app.get("/", (req, res) => {
-  console.log(req.query) // => "{ term: hey" }
-  res.render("home")
+  term = ""
+  if (req.query.term) {
+    term = req.query.term
+  }
+  Tenor.Search.Query(term, "10")
+    .then((response) => {
+      const gifs = response
+      res.render("home", { gifs })
+    })
+    .catch(console.error)
 })
 
 app.get("/greetings/:name", (req, res) => {
