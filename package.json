@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/xiluna/gif-search/issues"
   },
-  "homepage": "https://github.com/xiluna/gif-search#readme"
+  "homepage": "https://github.com/xiluna/gif-search#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
