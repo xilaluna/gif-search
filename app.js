@@ -43,6 +43,7 @@ app.get("/greetings/:name", (req, res) => {
 })
 
 // Start Server
-app.listen(3000, () => {
-  console.log("Gif Search listening on port localhost:3000!")
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log("Gif Search Running")
 })
