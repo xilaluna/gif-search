@@ -1,9 +1,10 @@
 // Require Libraries
+require("dotenv").config()
 const { response } = require("express")
 const express = require("express")
 
 const Tenor = require("tenorjs").client({
-  Key: "JEGTEZF54LUT",
+  Key: "key",
   Filter: "high",
   Locale: "en_US",
 })
