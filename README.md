@@ -7,7 +7,7 @@
   </a>
 </div>
 
-## Vist
+## Visit
 
 [Gif Search](http://gif-search.dev.xilaluna.com)
 
