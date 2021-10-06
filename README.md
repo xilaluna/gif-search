@@ -25,6 +25,12 @@ git clone https://github.com/xiluna/gif-search.git
 cd /gif-search
 ```
 
+### Change .env.example
+
+```bash
+mv .env.example .env
+```
+
 ### Execute Docker
 
 ```bash
